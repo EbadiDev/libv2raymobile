@@ -1,4 +1,4 @@
-module github.com/fv2ray/libv2raymobile
+module github.com/ebadidev/libv2raymobile
 
 go 1.23.5
 
@@ -34,16 +34,16 @@ require (
 	github.com/xtls/reality v0.0.0-20240909153216-e26ae2305463 // indirect
 	go.uber.org/mock v0.5.0 // indirect
 	go4.org/netipx v0.0.0-20231129151722-fdeea329fbba // indirect
-	golang.org/x/crypto v0.32.0 // indirect
+	golang.org/x/crypto v0.33.0 // indirect
 	golang.org/x/exp v0.0.0-20250103183323-7d7fa50e5329 // indirect
-	golang.org/x/mobile v0.0.0-20250106192035-c31d5b91ecc3 // indirect
-	golang.org/x/mod v0.22.0 // indirect
-	golang.org/x/net v0.34.0 // indirect
-	golang.org/x/sync v0.10.0 // indirect
-	golang.org/x/sys v0.29.0 // indirect
-	golang.org/x/text v0.21.0 // indirect
+	golang.org/x/mobile v0.0.0-20250218173827-cd096645fcd3 // indirect
+	golang.org/x/mod v0.23.0 // indirect
+	golang.org/x/net v0.35.0 // indirect
+	golang.org/x/sync v0.11.0 // indirect
+	golang.org/x/sys v0.30.0 // indirect
+	golang.org/x/text v0.22.0 // indirect
 	golang.org/x/time v0.9.0 // indirect
-	golang.org/x/tools v0.29.0 // indirect
+	golang.org/x/tools v0.30.0 // indirect
 	golang.zx2c4.com/wintun v0.0.0-20230126152724-0fa3db229ce2 // indirect
 	google.golang.org/genproto/googleapis/rpc v0.0.0-20250122153221-138b5a5a4fd4 // indirect
 	google.golang.org/grpc v1.70.0 // indirect
@@ -54,6 +54,13 @@ require (
 )
 
 replace (
+	// Fix dependency chain issues
+	github.com/Microsoft/hcsshim => github.com/Microsoft/hcsshim v0.10.0-rc.8
+	github.com/containerd/aufs => github.com/containerd/aufs v1.0.0
+	github.com/containerd/containerd => github.com/containerd/containerd v2.0.2+incompatible
+	github.com/docker/distribution => github.com/docker/distribution v2.8.2+incompatible
+	github.com/mitchellh/osext => github.com/kardianos/osext v0.0.0-20190222173326-2bc1f35cddc0
+
 	// Force GFW-knocker dependencies
 	github.com/xtls/xray-core => github.com/GFW-knocker/Xray-core v1.25.2-mahsa-r1
 	golang.zx2c4.com/wireguard => github.com/GFW-knocker/wireguard v1.0.6
